@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    transition: background-image 1s ease;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Background.webp'); 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.weather-icon {
+    width: 70px; 
+    height: 50px;
+    margin-right: 10px; 
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+}
+
+
+.container {
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    padding: 30px;
+    margin-top: -50px; 
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    color: rgb(11, 2, 2);
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 20px; 
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #6908d1be;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+}
+
+button:hover {
+    background-color: #4574a0;
+}
+
+.weather-and-forecast {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+.weather-info {
+    width: 50%;
+    text-align:center ;
+    margin-right: 20px; 
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.weather-info p {
+    color: rgb(30, 207, 204);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+.weather-info i {
+    margin-right: 5px;
+}
+
+.forecast-container {
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.forecast-container canvas {
+    width: 100%;
+    height: 300px; 
+}
+
+.weather-info .error-message {
+    color: rgb(230, 86, 86);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.footer {
+    text-align: center;
+    margin-bottom: 0px; /* Space above the footer */
+    padding: 10px; /* Padding inside the footer */
+    background-color: rgba(18, 2, 2, 0.932); /* Semi-transparent background */
+    color: rgb(243, 241, 245); /* Text color */
+    width: 100%; /* Full width */
+    position: relative; 
+    bottom: 0; /* Stick to the bottom */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.5em; /* Remove margin for the paragraph */
+}
+
+footer a {
+    color: #3d1d7c; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration:dashed; /* Underline on hover */
+}
+
+/* Mobile View Styles */
+@media (max-width: 600px) {
+    body {
+        height: auto; /* Allow body to grow with content */
+        padding: 10px; /* Add padding to prevent content from sticking to edges */
+    }
+
+    .header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center items horizontally */
+        margin-bottom: 20px; /* Add space below header */
+    }
+
+    .weather-icon {
+        width: 50px; /* Smaller weather icon for mobile */
+        height: 50px; /* Adjust height accordingly */
+        margin-top: 25px; /* Space below the icon */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Smaller heading size */
+        margin-top: 5px; /* Reduced margin */
+        text-align: center; /* Center text */
+    }
+
+    .container {
+        width: 100%; /* Full width for the container */
+        padding: 10px; /* Reduced padding for mobile */
+    }
+
+    input[type="text"] {
+        padding: 10px; /* Consistent padding */
+        width: 90%; /* Full width with margin */
+        max-width: none; /* Remove max width restriction */
+        margin-top: 10px; /* Spacing above input */
+    }
+
+    button {
+        padding: 10px 0; /* Vertical padding only for a better touch target */
+        width: 90%; /* Full width for button */
+        max-width: none; /* Remove max width restriction */
+        margin-top: 10px; /* Space above the button */
+    }
+
+    .weather-and-forecast {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align the content */
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Space above */
+    }
+
+    .weather-info {
+        width: 90%; /* Adjust width */
+        text-align: center; /* Center text */
+        margin-bottom: 15px; /* Space below */
+        padding: 15px; /* Adjust padding */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    }
+
+    .forecast-container {
+        width: 90%; /* Adjusted width */
+        padding: 15px; /* Padding for forecast container */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    }
+
+    .forecast-container canvas {
+        height: auto; /* Fixed height for mobile */
+        max-width: 100%; /* Ensure canvas does not overflow */
+    }
+
+    .weather-info p {
+        font-size: 1em; /* Smaller font size for paragraphs */
+    }
+
+    .weather-info .error-message {
+        font-size: 1em; /* Error message size */
+    }
+}
